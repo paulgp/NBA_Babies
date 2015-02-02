@@ -69,8 +69,8 @@ def main():
         time.sleep(0.1)  
 
     with open('data_output.csv', 'wb') as f:
-        writer = writer.csvwriter(f)
-        writer.writerow('Player', 'Birthdate')
+        writer = csv.writer(f)
+        writer.writerow(['Player', 'Birthdate'])
         for key in data.keys():
             for date in data[key]:
                 writer.writerow([key, date])
